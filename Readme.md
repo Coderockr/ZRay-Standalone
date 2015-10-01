@@ -1,7 +1,7 @@
-# Construir a imagem
+# Build
 
 	docker build -t zray-standalone .
 
-# Rodar a imagem
+# Run
 
 	docker run -d -p 80:80 -p 10081:10081 zray-standalone
