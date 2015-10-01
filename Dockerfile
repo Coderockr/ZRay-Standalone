@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-RUN sudo apt-get -y --fix-missing install apache2 libapache2-mod-php5 php5-curl php5-sqlite wget \
+RUN sudo apt-get -y --fix-missing install apache2 libapache2-mod-php5 php5-curl php5-apcu php5-sqlite wget \
 	&& cd /opt \
 	&& wget http://www.zend.com/en/download/3458?start=true -O /tmp/zray.tar.gz \
 	&& sudo tar xvfz /tmp/zray.tar.gz -C /opt \
