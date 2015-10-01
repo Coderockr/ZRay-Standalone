@@ -10,6 +10,8 @@ RUN sudo apt-get -y --fix-missing install apache2 libapache2-mod-php5 php5-curl 
 	&& sudo ln -sf /opt/zray/zray.ini /etc/php5/cli/conf.d/zray.ini \
 	&& sudo ln -sf /opt/zray/lib/zray.so /usr/lib/php5/20121212/zray.so \
 	&& sudo chown -R www-data:www-data /opt/zray \
+	&& sudo a2enmod headers \
+	&& sudo a2enmod rewrite \
 	&& sudo service apache2 restart
 
 ENV APACHE_RUN_USER www-data
